@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { LoggerService } from '../../services/logger.service';
 
 @Component({
   selector: 'app-logo',
@@ -9,7 +10,11 @@ export class LogoComponent implements OnInit {
   afficherLogo = false;
   titreBouton = 'cacher';
 
-  constructor() { }
+  @Output()
+  // import sur angular core, très très important !!! Quand j'émets un événement, j'indique ce qu'on renvoie
+  clickSurImage = new EventEmitter<boolean>();
+
+  constructor(private logger: LoggerService) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +27,8 @@ export class LogoComponent implements OnInit {
       this.titreBouton = 'afficher';
 
     }
+
+    this.clickSurImage.emit(this.afficherLogo);
   }
 
 }

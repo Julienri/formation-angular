@@ -17,7 +17,7 @@ declare const require: {
 // First, initialize the Angular testing environment.
 getTestBed().initTestEnvironment(
   BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting()
+  platformBrowserDynamicTesting() // similaire main.ts
 );
 // Then we find all the tests.
 const context = require.context('./', true, /\.spec\.ts$/);

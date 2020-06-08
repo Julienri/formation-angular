@@ -1,6 +1,8 @@
 <h1>{{ monTitre }}</h1>
 
-<app-liste-wookies></app-liste-wookies>
-
-<app-logo></app-logo>
-<app-logo></app-logo>
+<app-logo (clickSurImage)="maFonctionPourSavoirLeClick()"></app-logo>
+<!-- binding d'un composant (connexion entre 2 composants) -->
+<!-- les croches permettent ça sinon c'est un attribut de balise html-->
+<!-- Mettre entre guillemets et cot-->
+<app-liste-wookies [titre]="'Liste des wookies'"></app-liste-wookies>
+<app-liste-wookies [titre]='titreListeWookies'></app-liste-wookies>

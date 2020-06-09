@@ -1,7 +1,10 @@
+{{monWookie.prenom}}
+
+<!-- binding bidirectionnel-->
 <form>
   <div>
     <label>Prenom</label>
-    <input type="text"/>
+    <input type="text" name="prenom" [(ngModel)]='monWookie.prenom'>
   </div>
-  <button></button>
+  <button (click)="save()">Ajouter</button>
 </form>

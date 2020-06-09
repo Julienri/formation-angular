@@ -7,6 +7,7 @@ import { ListeWookiesComponent } from './features/wookie/liste-wookies/liste-woo
 import { LoggerService } from './shared/services/logger.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TestTdfComponent } from './test-tdf/test-tdf.component';
+import { FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TestTdfComponent } from './test-tdf/test-tdf.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     // LoggerService

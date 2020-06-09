@@ -5,15 +5,19 @@ import { AppComponent } from './app.component';
 import { LogoComponent } from './shared/components/logo/logo.component';
 import { ListeWookiesComponent } from './features/wookie/liste-wookies/liste-wookies.component';
 import { LoggerService } from './shared/services/logger.service';
+import { HttpClientModule } from '@angular/common/http';
+import { TestTdfComponent } from './test-tdf/test-tdf.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogoComponent,
-    ListeWookiesComponent
+    ListeWookiesComponent,
+    TestTdfComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [
     // LoggerService

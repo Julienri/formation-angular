@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apis: {
+    wookies: {
+      url: 'https://74b67b4a-ffd1-439d-a377-f66106f2af6e.mock.pstmn.io/wookies'
+    }
+  }
 };
 
 /*
